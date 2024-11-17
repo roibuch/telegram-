@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דילים בקליק - הדילים הכי חמים ברשת!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap'); /* פונט מקצועי בעברית */
+
+        body {
+            font-family: 'Alef', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* מניעת גלילה */
+            direction: rtl; /* כיוון מימין לשמאל */
+            position: relative;
+        }
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+        .circle.one {
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: 10%;
+        }
+        .circle.two {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            right: 15%;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* לוגו עגול */
+            margin-bottom: 10px; /* פחות רווח בין הלוגו לכותרת */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #333;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.5;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .join-buttons {
+            display: flex;
+            justify-content: space-between; /* כפתורים זה לצד זה */
+            gap: 15px;
+            margin-bottom: 40px; /* רווח גדול יותר בין הכפתורים לקו האדום */
+        }
+        .join-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #0088cc, #005f99); /* צבע לטלגרם */
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 50%; /* כל כפתור יתפוס מחצית */
+        }
+        .join-button.whatsapp {
+            background: linear-gradient(to right, #25d366, #128c7e); /* צבע לווצאפ */
+        }
+        .join-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+        .join-button img {
+            width: 40px; /* גודל לוגו */
+            height: 40px;
+            border-radius: 50%; /* לוגו עגול */
+            margin-left: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-bar {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            margin: 40px 0; /* רווח מוגדל מעל ומתחת */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .call-to-action {
+            font-size: 1.2em;
+            color: #444;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+    </div>
+    <div class="container">
+        <img src="logo.png" alt="לוגו דילים בקליק" class="logo">
+        <h1>דילים בקליק</h1>
+        <p>מצטרפים עכשיו לערוץ הטלגרם<br> או קבוצת הווצאפ שלנו ומתחילים ליהנות מהדילים הכי חמים!</p>
+        <div class="join-buttons">
+            <a href="https://t.me/dilimbeklik" target="_blank" class="join-button">
+                <img src="telegram-icon.png" alt="טלגרם"> טלגרם
+            </a>
+            <a href="https://whatsapp.com/channel/0029VagPB950LKZBjm3WC62v" target="_blank" class="join-button whatsapp">
+                <img src="whatsapp-icon.png" alt="ווצאפ"> ווצאפ
+            </a>
+        </div>
+        <div class="highlight-bar"></div>
+        <p class="call-to-action">🔥 לא תאמינו איזה דילים מחכים לכם בפנים! הצטרפו עכשיו ותהיו הראשונים ליהנות! 🔥</p>
+    </div>
+</body>
+</html>
